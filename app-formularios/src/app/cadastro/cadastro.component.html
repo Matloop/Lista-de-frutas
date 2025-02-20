@@ -1,0 +1,21 @@
+<p>Formulario reativo</p>
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+  <label for="nome">Informe nome</label>
+  <input id="nome" type="text" formControlName="nome" required />
+  <div *ngIf="formulario.controls.nome.invalid && formulario.controls.nome.touched">
+    O nome é obrigatório
+  </div>
+
+  <label for="nome">Informe email</label>
+  <input id="nome" type="text" formControlName="email" required />
+  <div *ngIf="formulario.controls.email.invalid && formulario.controls.email.touched">
+    O email é obrigatório
+  </div>
+
+  <label for="nome">Informe fone</label>
+  <input id="nome" type="text" formControlName="fone" required />
+
+  <button [disabled]="formulario.invalid">Gravar</button>
+
+</form>
+

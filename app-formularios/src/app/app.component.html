@@ -1,0 +1,14 @@
+<h1>Trabalhando com formulário </h1>
+
+<form #f="ngForm" (ngSubmit)="dados(f)">
+  <Label>Informe nome</Label>
+  <input type = "text" [(ngModel)]="usuario.nome" name="nome"/>
+  <label class = 'error'>{{ labelTextNome }}</label>
+  <Label>Informe email</Label>
+  <input type = "text" [(ngModel)]="usuario.email" name="email"/>
+  <label class = 'error'>{{ labelTextEmail }}</label>
+  <Label>Informe fone</Label>
+  <input type = "text" [(ngModel)]="usuario.fone" name="fone"/>
+  <label class = 'error'>{{ labelTextFone }}</label>
+  <input type="submit" value="enviar" />
+</form>
